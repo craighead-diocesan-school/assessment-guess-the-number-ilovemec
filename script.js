@@ -4,12 +4,16 @@ function guessNumber() {
   alert("Hi " + playersName + " Im thinking of a number between 1 and 20, inclusive")
 
   let randomNumber = Math.floor(Math.random() * (20 - 0) + 0)
-  alert(+randomNumber)
+  alert(randomNumber)
 
-  let playersGuess = prompt("What's your guess?")
-
+  let playersGuess = ""
+  while (randomNumber != playersGuess) {
+    playersGuess = prompt("What's your guess?")
+    alert(playersGuess)
+  }
   if (playersGuess == randomNumber) {
     alert("Correct!!!")
+    //   } else if (playersGuess != randomNumber) {
   } else {
     alert("Wrong")
   }
